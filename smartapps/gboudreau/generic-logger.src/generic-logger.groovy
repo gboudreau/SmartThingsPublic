@@ -97,7 +97,9 @@ def genericHandler(evt) {
 	def theAtts = evt.device.supportedAttributes
 	theAtts.each {att ->
         def state = evt.device.currentState(att.name)
-    	device_states[att.name] = state.value
+        if (state) {
+    		device_states[att.name] = state.value
+        }
 	}
 
     def json = [
