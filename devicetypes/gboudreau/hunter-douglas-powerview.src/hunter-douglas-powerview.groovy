@@ -45,7 +45,7 @@ metadata {
             state "on", label: 'ON', action: "switch.off",
                   icon: "st.switches.light.on", backgroundColor: "#79b821"
         }
-		details(["Status","openSwitch","closeSwitch","presetSwitch","switch"])
+		details(["Status","openSwitch","closeSwitch","presetSwitch"])
         main ("switch")
 	}
 
