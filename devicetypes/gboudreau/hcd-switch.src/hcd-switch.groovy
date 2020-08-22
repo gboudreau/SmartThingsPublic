@@ -52,11 +52,13 @@ metadata {
 def on() {
 	log.debug "HCD: Sending ON command for device ${device} (${device.deviceNetworkId})"
     api_call("on")
+    api_call("get")
 }
 
 def off() {
 	log.debug "HCD: Sending OFF command for device ${device} (${device.deviceNetworkId})"
     api_call("off")
+    api_call("get")
 }
 
 def refresh() {
